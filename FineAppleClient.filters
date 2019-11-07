@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\State">
+      <UniqueIdentifier>{0bf6c33b-6a86-43e0-a274-1f8899eb60ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tolua++">
+      <UniqueIdentifier>{9eab1c8a-4738-4b4a-b5ec-eacbe146b6df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object">
+      <UniqueIdentifier>{09c4189b-ebc1-457e-b473-406626101888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Soul">
+      <UniqueIdentifier>{86a100ce-9839-49d7-8e40-7267f1678b9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\ReadMe.txt" />
+    <None Include="res\Application.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\fine%40pple\Luna Underworld\Application\src\tolua.pkg">
+      <Filter>Source Files\tolua++</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\Application.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\MainMenuState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\State.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\tolua.cpp">
+      <Filter>Source Files\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\SinglePlayState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\EntityLoadListener.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Box.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\PlayingController.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\DebugManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maze.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\SwordSoul.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Soul.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\OrcSoul.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SoulFactory.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Cursor.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Tooltip.cpp">
+      <Filter>Source Files\object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Application.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\MainMenuState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\tolua.h">
+      <Filter>Source Files\tolua++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\State.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Utility.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\SinglePlayState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\EntityLoadListener.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Box.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\PlayingController.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\CommonDefine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\DebugManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maze.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\SwordSoul.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Soul.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\OrcSoul.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SoulFactory.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Cursor.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\fine%40pple\Luna Underworld\Application\src\Tooltip.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityLoadListener.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Tooltip.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglePlayState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="tolua.cpp">
+      <Filter>Source Files\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonParser.cpp">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonManager.cpp">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="FineappleLua.cpp">
+      <Filter>Source Files\tolua++</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyFactory.cpp">
+      <Filter>Source Files\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Body.cpp">
+      <Filter>Source Files\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyOrc.cpp">
+      <Filter>Source Files\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="BodySword.cpp">
+      <Filter>Source Files\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonBlueprint.cpp">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="Soul.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyDoor.cpp">
+      <Filter>Source Files\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="SoulController.cpp">
+      <Filter>Source Files\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor.cpp">
+      <Filter>Source Files\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessorMove.cpp">
+      <Filter>Source Files\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Source Files\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessorAction.cpp">
+      <Filter>Source Files\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandChangeDirection.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveForward.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveBackward.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveStop.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\IDCreater.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\ShinCommon.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\ShinIOCP.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\ShinIOCPClient.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\VariableMemoryPool.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkPlay.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectMenuState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveLeftward.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandMoveRightward.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandUseHand.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="StencilQueueListener.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomSceneManager.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDefine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityLoadListener.h">
+      <Filter>Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Tooltip.h">
+      <Filter>Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglePlayState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="tolua.h">
+      <Filter>Source Files\tolua++</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonParser.h">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonManager.h">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="FineappleLua.h">
+      <Filter>Source Files\tolua++</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyFactory.h">
+      <Filter>Source Files\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Body.h">
+      <Filter>Source Files\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyOrc.h">
+      <Filter>Source Files\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="BodySword.h">
+      <Filter>Source Files\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonBlueprint.h">
+      <Filter>Source Files\Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="Soul.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyDoor.h">
+      <Filter>Source Files\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="SoulController.h">
+      <Filter>Source Files\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor.h">
+      <Filter>Source Files\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessorMove.h">
+      <Filter>Source Files\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Source Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventCommon.h">
+      <Filter>Source Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessorAction.h">
+      <Filter>Source Files\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandChangeDirection.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMoveForward.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMoveBackward.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMoveStop.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessorCommon.h">
+      <Filter>Source Files\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\IDCreater.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\PacketDataOperator.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\ShinCommon.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\ShinIOCP.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\ShinIOCPClient.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\VariableMemoryPool.h">
+      <Filter>Source Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkPlay.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectMenuState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMoveLeftward.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandMoveRightward.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandUseHand.h">
+      <Filter>Source Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="StencilQueueListener.h">
+      <Filter>Source Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomSceneManager.h">
+      <Filter>Source Files\Rendering</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\ReadMe.txt" />
+    <None Include="res\Application.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="tolua.pkg">
+      <Filter>Source Files\tolua++</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8a25285a-3361-4cd4-bef8-b17cd47c2cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{c1298437-db78-43f3-b250-d5641efabb0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object">
+      <UniqueIdentifier>{c8df3238-aeae-4738-a47a-221ec422b46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\State">
+      <UniqueIdentifier>{df89d594-194d-4231-a531-baf1f69a9b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tolua++">
+      <UniqueIdentifier>{4e39b739-5f11-4656-bc66-bbaeba17b1b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dungeon">
+      <UniqueIdentifier>{bfc72ccc-ce27-4905-8d37-643cf7d5359a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TinyXML">
+      <UniqueIdentifier>{5644e592-5ec1-4fda-9d05-fd2bb35a3a33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Body">
+      <UniqueIdentifier>{a24faa00-f579-44b8-bc9c-b3082da67385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Soul">
+      <UniqueIdentifier>{d25086c5-9444-487d-a876-7c669b0cfc40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Command">
+      <UniqueIdentifier>{a21d84bc-d584-462f-bc16-9b28c98f27a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Processor">
+      <UniqueIdentifier>{6cf45a62-b189-459b-9ebd-7f3e2ceb0bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Event">
+      <UniqueIdentifier>{7afd2dd4-def0-4be2-b482-5fe6065a7d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Network">
+      <UniqueIdentifier>{74556cb2-640d-484f-b839-9b512e0a0beb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{7807ef40-d2a6-4527-adf1-139deca5dd57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\Application.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

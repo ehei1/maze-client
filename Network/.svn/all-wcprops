@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network
+END
+ShinCommon.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinCommon.h
+END
+ShinIOCPClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinIOCPClient.h
+END
+ShinIOCP.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinIOCP.h
+END
+IDCreater.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/IDCreater.cpp
+END
+PacketDataOperator.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/PacketDataOperator.h
+END
+IDCreater.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/IDCreater.h
+END
+VariableMemoryPool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/VariableMemoryPool.cpp
+END
+ShinCommon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinCommon.cpp
+END
+ShinIOCPClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinIOCPClient.cpp
+END
+ShinIOCP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/ShinIOCP.cpp
+END
+VariableMemoryPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/fineapple/!svn/ver/43/trunk/FineAppleClient/Network/VariableMemoryPool.h
+END

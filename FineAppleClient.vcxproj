@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{05530853-1C50-4632-9561-2E89B3D8ED65}</ProjectGuid>
+    <RootNamespace>client</RootNamespace>
+    <ProjectName>GameClient</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>..\obj\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>..\obj\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;OGRE_UNICODE_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../Ogre 1.7.2/make/include;../Ogre 1.7.2/source/OgreMain/include;../CEGUI-0.7.5/cegui/include/ScriptingModules/LuaScriptModule/support/tolua++;../CEGUI-0.7.5/dependencies/include;../Newton 2.24/sdk;../boost_1_42;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)bin\OGRE\$(Configuration)\OgreMain_d.lib;$(SolutionDir)Ogre 1.7.2\Dependencies\lib\$(Configuration)\OIS_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIBase_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIOgreRenderer_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUILuaScriptModule_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\tolua++_d.lib;$(SolutionDir)CEGUI-0.7.5\dependencies\lib\dynamic\lua_d.lib;$(SolutionDir)bin\OgreNewt_VS10\$(Configuration)\OgreNewt_d.lib;$(SolutionDir)Newton 2.24\sdk\x32\dll_vs9\newton.lib;$(SolutionDir)boost_1_42\lib\libboost_thread-vc100-mt-gd-1_42.lib;$(SolutionDir)boost_1_42\lib\libboost_date_time-vc100-mt-gd-1_42.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbb_debug.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbbmalloc_proxy_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ManifestFile>$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying exe to samples bin directory ...</Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>$(IntDir)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+    <Xdcmake>
+      <OutputFile>$(OutDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>../;../Ogre 1.7.2/make/include;../Ogre 1.7.2/source/OgreMain/include;../CEGUI-0.7.5/cegui/include/ScriptingModules/LuaScriptModule/support/tolua++;../CEGUI-0.7.5/dependencies/include;../Newton 2.24/sdk;../boost_1_42;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)bin\OGRE\$(Configuration)\OgreMain.lib;$(SolutionDir)Ogre 1.7.2\Dependencies\lib\$(Configuration)\OIS.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIBase.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIOgreRenderer.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUILuaScriptModule.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\tolua++.lib;$(SolutionDir)CEGUI-0.7.5\dependencies\lib\dynamic\lua.lib;$(SolutionDir)bin\OgreNewt_VS10\$(Configuration)\OgreNewt.lib;$(SolutionDir)Newton 2.24\sdk\x32\dll_vs9\newton.lib;$(SolutionDir)boost_1_42\lib\libboost_thread-vc100-mt-1_42.lib;$(SolutionDir)boost_1_42\lib\libboost_date_time-vc100-mt-1_42.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbb.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbbmalloc_proxy.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying exe to samples bin directory ...</Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="tolua.pkg" />
+    <None Include="docs\ReadMe.txt" />
+    <None Include="res\Application.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\Application.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommandUseHand.cpp" />
+    <ClCompile Include="CustomSceneManager.cpp" />
+    <ClCompile Include="CommandChangeDirection.cpp" />
+    <ClCompile Include="CommandMoveBackward.cpp" />
+    <ClCompile Include="CommandMoveForward.cpp" />
+    <ClCompile Include="CommandMoveLeftward.cpp" />
+    <ClCompile Include="CommandMoveRightward.cpp" />
+    <ClCompile Include="CommandMoveStop.cpp" />
+    <ClCompile Include="ConnectMenuState.cpp" />
+    <ClCompile Include="Processor.cpp" />
+    <ClCompile Include="ProcessorAction.cpp" />
+    <ClCompile Include="ProcessorMove.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="SoulController.cpp" />
+    <ClCompile Include="BodyDoor.cpp" />
+    <ClCompile Include="StencilQueueListener.cpp" />
+    <ClCompile Include="Body.cpp" />
+    <ClCompile Include="BodyFactory.cpp" />
+    <ClCompile Include="BodyOrc.cpp" />
+    <ClCompile Include="BodySword.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="DebugManager.cpp" />
+    <ClCompile Include="DungeonBlueprint.cpp" />
+    <ClCompile Include="DungeonManager.cpp" />
+    <ClCompile Include="DungeonParser.cpp" />
+    <ClCompile Include="EntityLoadListener.cpp" />
+    <ClCompile Include="FineappleLua.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
+    <ClCompile Include="NetworkPlay.cpp" />
+    <ClCompile Include="Network\IDCreater.cpp" />
+    <ClCompile Include="Network\ShinCommon.cpp" />
+    <ClCompile Include="Network\ShinIOCP.cpp" />
+    <ClCompile Include="Network\ShinIOCPClient.cpp" />
+    <ClCompile Include="Network\VariableMemoryPool.cpp" />
+    <ClCompile Include="Soul.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="Tooltip.cpp" />
+    <ClCompile Include="SinglePlayState.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="tolua.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommandUseHand.h" />
+    <ClInclude Include="CustomSceneManager.h" />
+    <ClInclude Include="CommandChangeDirection.h" />
+    <ClInclude Include="CommandMoveBackward.h" />
+    <ClInclude Include="CommandMoveForward.h" />
+    <ClInclude Include="CommandMoveLeftward.h" />
+    <ClInclude Include="CommandMoveRightward.h" />
+    <ClInclude Include="CommandMoveStop.h" />
+    <ClInclude Include="ConnectMenuState.h" />
+    <ClInclude Include="EventCommon.h" />
+    <ClInclude Include="Processor.h" />
+    <ClInclude Include="ProcessorAction.h" />
+    <ClInclude Include="ProcessorCommon.h" />
+    <ClInclude Include="ProcessorMove.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="SoulController.h" />
+    <ClInclude Include="BodyDoor.h" />
+    <ClInclude Include="StencilQueueListener.h" />
+    <ClInclude Include="Body.h" />
+    <ClInclude Include="BodyFactory.h" />
+    <ClInclude Include="BodyOrc.h" />
+    <ClInclude Include="BodySword.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="CommonDefine.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="DebugManager.h" />
+    <ClInclude Include="DungeonBlueprint.h" />
+    <ClInclude Include="DungeonManager.h" />
+    <ClInclude Include="DungeonParser.h" />
+    <ClInclude Include="EntityLoadListener.h" />
+    <ClInclude Include="FineappleLua.h" />
+    <ClInclude Include="MainMenuState.h" />
+    <ClInclude Include="NetworkPlay.h" />
+    <ClInclude Include="Network\IDCreater.h" />
+    <ClInclude Include="Network\PacketDataOperator.h" />
+    <ClInclude Include="Network\ShinCommon.h" />
+    <ClInclude Include="Network\ShinIOCP.h" />
+    <ClInclude Include="Network\ShinIOCPClient.h" />
+    <ClInclude Include="Network\VariableMemoryPool.h" />
+    <ClInclude Include="Soul.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+    <ClInclude Include="Tooltip.h" />
+    <ClInclude Include="SinglePlayState.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="tolua.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
