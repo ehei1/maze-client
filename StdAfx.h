@@ -20,26 +20,24 @@
 #pragma warning (disable:4512)
 #pragma warning (disable:4127)
 
-#include <tbb3.0 update 5/include/tbb/tbb.h>
-#include <tbb3.0 update 5/include/tbb/tbbmalloc_proxy.h>
-#include <Ogre 1.7.2/Dependencies/include/OIS/OISEvents.h>
-#include <Ogre 1.7.2/Dependencies/include/OIS/OISInputManager.h>
-#include <Ogre 1.7.2/Dependencies/include/OIS/OISKeyboard.h>
-#include <Ogre 1.7.2/Dependencies/include/OIS/OISMouse.h>
-#include <Ogre 1.7.2/source/OgreMain/include/Ogre.h>
-#include <Ogre 1.7.2/source/OgreMain/include/OgreTextAreaOverlayElement.h>
-#include <Ogre 1.7.2/source/Samples/Common/include/SdkCameraMan.h>
+#include <OgreSDK_vc10_v1-7-4/include/OIS/OISEvents.h>
+#include <OgreSDK_vc10_v1-7-4/include/OIS/OISInputManager.h>
+#include <OgreSDK_vc10_v1-7-4/include/OIS/OISKeyboard.h>
+#include <OgreSDK_vc10_v1-7-4/include/OIS/OISMouse.h>
+#include <OgreSDK_vc10_v1-7-4/include/OGRE/Ogre.h>
+#include <OgreSDK_vc10_v1-7-4/include/OGRE/OgreTextAreaOverlayElement.h>
+#include <OgreSDK_vc10_v1-7-4/Samples/Common/include/SdkCameraMan.h>
 #include <OgreNewt 2/inc/OgreNewt.h>
 #include <OgreNewt 2/inc/OgreNewt_BasicFrameListener.h>
 
-#include <CEGUI-0.7.5/cegui/include/CEGUI.h>
-#include <CEGUI-0.7.5/cegui/include/ScriptingModules/LuaScriptModule/CEGUILua.h>
-#include <CEGUI-0.7.5/cegui/include/RendererModules/Ogre/CEGUIOgreRenderer.h>
+#include <CEGUI-SDK-0.7.5-vc10/cegui/include/CEGUI.h>
+#include <CEGUI-SDK-0.7.5-vc10/cegui/include/ScriptingModules/LuaScriptModule/CEGUILua.h>
+#include <CEGUI-SDK-0.7.5-vc10/cegui/include/RendererModules/Ogre/CEGUIOgreRenderer.h>
 
 extern "C" {
-#include <CEGUI-0.7.5/dependencies\include\lua.h>
-#include <CEGUI-0.7.5/dependencies\include\lauxlib.h>
-#include <CEGUI-0.7.5/dependencies\include\lualib.h>
+#include <CEGUI-SDK-0.7.5-vc10/dependencies\include\lua.h>
+#include <CEGUI-SDK-0.7.5-vc10/dependencies\include\lauxlib.h>
+#include <CEGUI-SDK-0.7.5-vc10/dependencies\include\lualib.h>
 };
 
 #include "tinyxml.h"

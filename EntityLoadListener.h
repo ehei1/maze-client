@@ -32,6 +32,6 @@ private:
 private:
 	const Ogre::String mResourceGroupName;
 	const Parameter mParameter;
-	tbb::atomic< bool > mIsDestroy;
-	tbb::atomic< bool > mIsReady;
+	bool mIsDestroy;
+	bool mIsReady;
 };

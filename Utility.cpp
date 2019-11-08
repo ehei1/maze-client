@@ -113,7 +113,7 @@ namespace Utility
 
 	int GetUniqueIndex()
 	{
-		static tbb::atomic< int > mUniqueIndex;
+		static int mUniqueIndex;
 
 		return ++mUniqueIndex;
 	}

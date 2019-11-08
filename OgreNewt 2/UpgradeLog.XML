@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OgreNewt_vc2008">
+</Property><Property Name="솔루션 파일" Value="C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.sln">
+</Property><Property Name="Date" Value="2019년 11월 7일 목요일">
+</Property><Property Name="Time" Value="오후 18:43">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="OgreNewt_vc2008.sln" Description="파일을 C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.sln.old(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="Converting project file 'C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.vcproj'.">
+</Event><Event ErrorLevel="1" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="MSB8012: $(TargetName) ('OgreNewt') does not match the Linker's OutputFile property value './lib/OgreNewt_d.dll' ('OgreNewt_d') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetName) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\lib\OgreNewt.dll') does not match the Linker's OutputFile property value './lib/OgreNewt_d.dll' ('C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\./lib/OgreNewt_d.dll') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\lib\OgreNewt.dll') does not match the Linker's OutputFile property value './lib/OgreNewt.dll' ('C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\./lib/OgreNewt.dll') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="Done converting to new project file 'C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="OgreNewt_vc2008" Source="OgreNewt_vc2008.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="OgreNewt_vc2008.sln" Description="솔루션을 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="" Source="OgreNewt_vc2008.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,60 @@
+language: cpp
+dist: xenial
+compiler: gcc
+os: linux
+addons:
+  apt:
+    sources:
+    - sourceline: "deb http://archive.ubuntu.com/ubuntu/ xenial multiverse"
+    - sourceline: "deb http://archive.ubuntu.com/ubuntu/ xenial-backports universe"
+    packages:
+    - cmake
+    - libxaw7-dev
+    - libzzip-dev
+    - libxrandr-dev
+    - libfreetype6-dev
+    - libxt-dev
+    - libboost-all-dev
+    - libgles2-mesa-dev
+    - mesa-common-dev
+    - libgl1-mesa-dev
+    - libglu1-mesa-dev # legacy GL RenderSystem only
+    - nvidia-cg-dev
+    - libois-dev
+cache:
+    - apt
+env:
+  global:
+    - MAKEFLAGS="-k -j2"
+    - CMAKE_FLAGS="-DCMAKE_CXX_STANDARD=11"
+    - OGRE_CMAKE_FLAGS="-DOGRE_BUILD_TESTS=OFF -DOGRE_BUILD_TOOLS=OFF -DOGRE_BUILD_SAMPLES=OFF -DOGRE_BUILD_COMPONENT_BITES=OFF -DOGRE_BUILD_COMPONENT_HLMS=OFF -DOGRE_BUILD_COMPONENT_JAVA=OFF -DOGRE_BUILD_COMPONENT_MESHLODGENERATOR=OFF -DOGRE_BUILD_COMPONENT_OVERLAY=ON -DOGRE_BUILD_COMPONENT_PAGING=OFF -DOGRE_BUILD_COMPONENT_PROPERTY=OFF -DOGRE_BUILD_COMPONENT_PYTHON=OFF -DOGRE_BUILD_COMPONENT_RTSHADERSYSTEM=OFF -DOGRE_BUILD_COMPONENT_TERRAIN=OFF -DOGRE_BUILD_COMPONENT_VOLUME=OFF -DOGRE_BUILD_PLUGIN_BSP=OFF -DOGRE_BUILD_PLUGIN_CG=OFF -DOGRE_BUILD_PLUGIN_EXRCODEC=OFF -DOGRE_BUILD_PLUGIN_OCTREE=OFF -DOGRE_BUILD_PLUGIN_PCZ=OFF -DOGRE_BUILD_PLUGIN_PFX=OFF -DOGRE_BUILD_RENDERSYSTEM_D3D11=OFF -DOGRE_BUILD_RENDERSYSTEM_D3D9=OFF -DOGRE_BUILD_RENDERSYSTEM_GL=OFF -DOGRE_BUILD_RENDERSYSTEM_GL3PLUS=OFF -DOGRE_BUILD_RENDERSYSTEM_GLES2=OFF"
+matrix:
+  include:
+  - name: "Ogre 1.9.1"
+    env: OGRE_REVISION="v1.9.1"
+  - name: "Ogre 1.10.12"
+    env: OGRE_REVISION="v1.10.12"
+  - name: "Ogre 1.11.3"
+    env: OGRE_REVISION="v1.11.3"
+before_script:
+    # build dependencies - OGRE
+    - git clone https://github.com/OGRECave/ogre.git --branch $OGRE_REVISION --depth 1
+    - mkdir -p build/ogre
+    - pushd build/ogre
+    - cmake ../../ogre $CMAKE_FLAGS $OGRE_CMAKE_FLAGS
+    - cmake --build .
+    - sudo cmake --build . -- install
+    - popd
+    # Build dependencies - newton
+    - git clone https://github.com/rastullahs-lockenpracht/newton.git --depth 1
+    - mkdir -p build/newton
+    - pushd build/newton
+    - cmake ../../newton $CMAKE_FLAGS
+    - cmake --build .
+    - sudo cmake --build . -- install
+    - popd
+script:
+    - mkdir -p build/ogrenewt
+    - pushd build/ogrenewt
+    - cmake ../.. $CMAKE_FLAGS
+    - cmake --build .

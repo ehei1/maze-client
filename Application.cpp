@@ -77,12 +77,13 @@ Application::~Application(void)
 		mStateContainer.end(),
 		[](StateContainer::value_type& value) { Utility::SafeDelete(value.second); } );
 
+	if ( ! mRemoveListenerQueue.empty() )
 	{
-		Ogre::MovableObject::Listener* listener = nullptr;
-
-		if(true == mRemoveListenerQueue.try_pop(listener))
+		if(auto listener = mRemoveListenerQueue.front())
 		{
 			Utility::SafeDelete(listener);
+
+			mRemoveListenerQueue.pop();
 		}
 	}
 
@@ -212,6 +213,9 @@ void Application::createFrameListener(void)
 		// LUJ, 게임 중에 제거하려면 포인터를 저장해둔다.
 		mSceneManager->addRenderQueueListener(new StencilQueueListener);
 	}
+
+	delete mNewtonWorld;
+	mNewtonWorld = nullptr;
 }
 //-------------------------------------------------------------------------------------
 void Application::destroyScene(void)
@@ -234,9 +238,9 @@ void Application::setupResources(void)
 	// Load resource paths from config file
 	Ogre::ConfigFile cf;
 #ifdef _DEBUG
-	cf.load("application_d.cfg");
+	cf.load("resources_d.cfg");
 #else
-	cf.load("application.cfg");
+	cf.load("resources.cfg");
 #endif
 	// Go through all sections & settings in the file
 	Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
@@ -276,8 +280,7 @@ void Application::go(void)
 	if (!setup())
 		return;
 
-	SelectState(
-		"mainMenu");
+	SelectState("singlePlay");
 
 	mRoot->startRendering();
 
@@ -314,6 +317,9 @@ bool Application::setup(void)
 	{
 		CEGUI::OgreRenderer::bootstrapSystem();
 
+		/*
+		// cannot found resource... omg
+
 		// set directories
 		CEGUI::Imageset::setDefaultResourceGroup("imagesets");
 		CEGUI::Font::setDefaultResourceGroup("fonts");
@@ -329,6 +335,7 @@ bool Application::setup(void)
 
 		CEGUI::System::getSingleton().setScriptingModule(&scriptModule);
 		CEGUI::System::getSingleton().executeScriptFile("application.lua");
+		*/
 	}
 
 	mDebugManager->Initialize();
@@ -351,12 +358,13 @@ bool Application::frameRenderingQueued(const Ogre::FrameEvent& evt)
 	mCameraMan->frameRenderingQueued(evt);
 	CEGUI::System::getSingleton().injectTimePulse(evt.timeSinceLastFrame);
 
+	if ( ! mRemoveListenerQueue.empty() )
 	{
-		Ogre::MovableObject::Listener* listener = nullptr;
-
-		if(true == mRemoveListenerQueue.try_pop(listener))
+		if(auto listener = mRemoveListenerQueue.front())
 		{
 			Utility::SafeDelete(listener);
+
+			mRemoveListenerQueue.pop();
 		}
 	}
 

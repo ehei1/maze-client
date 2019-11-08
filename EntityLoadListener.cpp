@@ -37,16 +37,12 @@ Ogre::BackgroundProcessTicket EntityLoadListener::Load()
 
 void EntityLoadListener::operationFailed(Ogre::BackgroundProcessTicket, const Ogre::BackgroundProcessResult&)
 {
-	Utility::AutoFlagger< tbb::atomic< bool >, bool > autoFlagger(
-		mIsDestroy);
-	autoFlagger.Reserve(true);
+	//mIsDestroy = true;
 }
 
 void EntityLoadListener::operationCompleted(Ogre::BackgroundProcessTicket ticket, const Ogre::BackgroundProcessResult& result)
 {
-	Utility::AutoFlagger< tbb::atomic< bool >, bool > autoFlagger(
-		mIsDestroy);
-	autoFlagger.Reserve(true);
+	//mIsDetroy = true;
 
 	Ogre::SceneManager& sceneManager = Application::GetSingleton().GetSceneManager();
 	Ogre::SceneNode* const parentSceneNode = sceneManager.getSceneNode(mParameter.mParentNodeName);

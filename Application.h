@@ -46,7 +46,7 @@ public:
 
 	DebugManager& GetDebugManager();
 
-	inline OgreNewt::World* GetNewtonWorld() { return mNewtonWorld->get(); }
+	inline OgreNewt::World* GetNewtonWorld() { return mNewtonWorld; }
 	inline OgreBites::SdkCameraMan* GetCameraMan() { return mCameraMan; }
 	inline OIS::Keyboard& GetKeyboard() { return *mKeyboard; }
 	
@@ -103,9 +103,9 @@ private:
 	StateContainer mStateContainer;
 	State::State* mCurrentState;
 
-	std::auto_ptr< OgreNewt::World > mNewtonWorld;
+	OgreNewt::World* mNewtonWorld;
 
-	typedef tbb::concurrent_queue< Ogre::MovableObject::Listener* > RemoveListenerQueue;
+	typedef std::queue< Ogre::MovableObject::Listener* > RemoveListenerQueue;
 	RemoveListenerQueue mRemoveListenerQueue;
 
 	std::auto_ptr< BodyFactory > mBodyFactory;

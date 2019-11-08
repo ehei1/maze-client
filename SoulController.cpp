@@ -217,31 +217,9 @@ void SoulController::mouseMoved(const OIS::MouseEvent& mouseEvent)
 
 	// LUJ, 커서가 바라보는 방면으로 몸체의 방향을 옮긴다
 	{
-<<<<<<< .mine
-		mBody->GetNewtonBody()->setOmega(Ogre::Vector3(0.5, 100, 0));
-=======
 		Event event(EventChangeDirection);
 		event.SetValue("direction", lookingDirection);
->>>>>>> .r59
-
-<<<<<<< .mine
-		//Ogre::Quaternion quaternion;
-		//quaternion.FromAxes(&lookingDirection);
-
-		//Event event(EventChangeDirection);
-		//event.SetValue("direction", lookingDirection);
-
-		//mBody->Receive(event);
-
-		//mBody->GetNewtonBody()->attachNode(mBody->GetSceneNode());
-
-
-		//mBody->GetNewtonBody()->setPositionOrientation(
-		//	mBody->GetSceneNode()->getPosition(),
-		//	quaternion);
-=======
 		mBody->Receive(event);
->>>>>>> .r59
 	}
 
 	// LUJ, 카메라가 항상 시선 쪽을 향하도록 한다. 이동 중에도 작동하면 몹시 산만하므로, 정지 중에만 기능시킨다

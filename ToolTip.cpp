@@ -66,7 +66,7 @@ void Tooltip::AddCaption(
 	textArea->setDimensions(1, 1);
 	textArea->setCaption(Ogre::DisplayString(buffer));
 	textArea->setCharHeight(20);
-	textArea->setFontName("FontTooltip");
+	textArea->setFontName("StarWars");
 	textArea->setColourBottom(bottomColour);
 	textArea->setColourTop(topColour);
 	textArea->setAlignment(Ogre::TextAreaOverlayElement::Center);

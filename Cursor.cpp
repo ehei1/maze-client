@@ -273,14 +273,14 @@ void Cursor::mouseMoved(const OIS::MouseEvent& mouseEvent, const Ogre::Vector3& 
 
 void Cursor::keyPressed(const OIS::KeyEvent&)
 {
-	mCursorObject->setVisible(false);
+	mCursorObject->setVisible(true);
 	mTooltipContainer.clear();
 }
 
 
 void Cursor::keyReleased(const OIS::KeyEvent&)
 {
-	mCursorObject->setVisible(false);
+	mCursorObject->setVisible(true);
 	mTooltipContainer.clear();
 }
 

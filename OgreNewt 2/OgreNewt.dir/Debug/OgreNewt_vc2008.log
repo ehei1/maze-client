@@ -1,0 +1,62 @@
+﻿빌드 시작: 2019-11-07 오후 7:34:19
+     1>2 노드의 "C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "OgreNewt.dir\Debug\OgreNewt.unsuccessfulbuild"에 연결(touching)하고 있습니다.
+       ClCompile:
+         모든 출력이 최신 상태입니다.
+       ManifestResourceCompile:
+         모든 출력이 최신 상태입니다.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\lib\OgreNewt.dll)이(가) Linker의 OutputFile 속성 값(C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\lib\OgreNewt_d.dll)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Link.OutputFile)에 지정된 값과 일치해야 합니다.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(OgreNewt)이(가) Linker의 OutputFile 속성 값(OgreNewt_d)과 일치하지 않습니다. 이로 인해 프로젝트가 잘못 빌드될 수 있습니다. 이를 수정하려면 $(OutDir), $(TargetName) 및 $(TargetExt) 속성 값이 %(Link.OutputFile)에 지정된 값과 일치해야 합니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"./lib/OgreNewt_d.dll" /VERSION:"2.0" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\OgreSDK_vc10_v1-7-4\lib\debug" /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\OgreSDK_vc10_v1-7-4\boost_1_47\lib" /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\Newton 2.32\packages\Win32\releaseDll" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib newton.lib OgreMain_d.lib /MANIFEST /ManifestFile:"OgreNewt.dir\Debug\OgreNewt.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:".\lib\OgreNewt_d.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\lib\OgreNewt_d.lib" /MACHINE:X86 /DLL OgreNewt.dir\Debug\OgreNewt.dll.embed.manifest.res
+         OgreNewt.dir\Debug\OgreNewt_BasicJoints.obj
+         OgreNewt.dir\Debug\OgreNewt_Body.obj
+         OgreNewt.dir\Debug\OgreNewt_BodyInAABBIterator.obj
+         OgreNewt.dir\Debug\OgreNewt_Collision.obj
+         OgreNewt.dir\Debug\OgreNewt_CollisionPrimitives.obj
+         OgreNewt.dir\Debug\OgreNewt_CollisionSerializer.obj
+         OgreNewt.dir\Debug\OgreNewt_ContactCallback.obj
+         OgreNewt.dir\Debug\OgreNewt_ContactJoint.obj
+         OgreNewt.dir\Debug\OgreNewt_Debugger.obj
+         OgreNewt.dir\Debug\OgreNewt_Joint.obj
+         OgreNewt.dir\Debug\OgreNewt_MaterialID.obj
+         OgreNewt.dir\Debug\OgreNewt_MaterialPair.obj
+         OgreNewt.dir\Debug\OgreNewt_PlayerController.obj
+         OgreNewt.dir\Debug\OgreNewt_RayCast.obj
+         OgreNewt.dir\Debug\OgreNewt_Tools.obj
+         OgreNewt.dir\Debug\OgreNewt_Vehicle.obj
+         OgreNewt.dir\Debug\OgreNewt_World.obj  /STACK:10000000 /machine:I386 /debug 
+            .\lib\OgreNewt_d.lib 라이브러리 및 .\lib\OgreNewt_d.exp 개체를 생성하고 있습니다.
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"OgreNewt.dir\Debug\OgreNewt.dll.embed.manifest" /manifest OgreNewt.dir\Debug\OgreNewt.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"OgreNewt.dir\Debug\OgreNewt.dll.embed.manifest.res" OgreNewt.dir\Debug\OgreNewt_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"./lib/OgreNewt_d.dll" /VERSION:"2.0" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\OgreSDK_vc10_v1-7-4\lib\debug" /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\OgreSDK_vc10_v1-7-4\boost_1_47\lib" /LIBPATH:"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\..\Newton 2.32\packages\Win32\releaseDll" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib newton.lib OgreMain_d.lib /MANIFEST /ManifestFile:"OgreNewt.dir\Debug\OgreNewt.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:".\lib\OgreNewt_d.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\lib\OgreNewt_d.lib" /MACHINE:X86 /DLL OgreNewt.dir\Debug\OgreNewt.dll.embed.manifest.res
+         OgreNewt.dir\Debug\OgreNewt_BasicJoints.obj
+         OgreNewt.dir\Debug\OgreNewt_Body.obj
+         OgreNewt.dir\Debug\OgreNewt_BodyInAABBIterator.obj
+         OgreNewt.dir\Debug\OgreNewt_Collision.obj
+         OgreNewt.dir\Debug\OgreNewt_CollisionPrimitives.obj
+         OgreNewt.dir\Debug\OgreNewt_CollisionSerializer.obj
+         OgreNewt.dir\Debug\OgreNewt_ContactCallback.obj
+         OgreNewt.dir\Debug\OgreNewt_ContactJoint.obj
+         OgreNewt.dir\Debug\OgreNewt_Debugger.obj
+         OgreNewt.dir\Debug\OgreNewt_Joint.obj
+         OgreNewt.dir\Debug\OgreNewt_MaterialID.obj
+         OgreNewt.dir\Debug\OgreNewt_MaterialPair.obj
+         OgreNewt.dir\Debug\OgreNewt_PlayerController.obj
+         OgreNewt.dir\Debug\OgreNewt_RayCast.obj
+         OgreNewt.dir\Debug\OgreNewt_Tools.obj
+         OgreNewt.dir\Debug\OgreNewt_Vehicle.obj
+         OgreNewt.dir\Debug\OgreNewt_World.obj  /STACK:10000000 /machine:I386 /debug 
+            .\lib\OgreNewt_d.lib 라이브러리 및 .\lib\OgreNewt_d.exp 개체를 생성하고 있습니다.
+         OgreNewt_vc2008.vcxproj -> C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\lib\OgreNewt.dll
+       FinalizeBuildStatus:
+         "OgreNewt.dir\Debug\OgreNewt.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "OgreNewt.dir\Debug\OgreNewt.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Users\ehei.TS\Downloads\dungeon-old\OgreNewt 2\OgreNewt_vc2008.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:03.00

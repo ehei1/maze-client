@@ -62,7 +62,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;OGRE_UNICODE_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../;../Ogre 1.7.2/make/include;../Ogre 1.7.2/source/OgreMain/include;../CEGUI-0.7.5/cegui/include/ScriptingModules/LuaScriptModule/support/tolua++;../CEGUI-0.7.5/dependencies/include;../Newton 2.24/sdk;../boost_1_42;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../;OgreSDK_vc10_v1-7-4\include\OGRE;CEGUI-SDK-0.7.5-vc10/cegui/include/ScriptingModules/LuaScriptModule/support/tolua++;CEGUI-SDK-0.7.5-vc10/dependencies/include;Newton 2.32\coreLibrary_200\source\newton;boost_1_43;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>false</TreatWarningAsError>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
@@ -79,7 +79,7 @@
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SolutionDir)bin\OGRE\$(Configuration)\OgreMain_d.lib;$(SolutionDir)Ogre 1.7.2\Dependencies\lib\$(Configuration)\OIS_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIBase_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUIOgreRenderer_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\CEGUILuaScriptModule_d.lib;$(SolutionDir)bin\CEGUI\$(Configuration)\tolua++_d.lib;$(SolutionDir)CEGUI-0.7.5\dependencies\lib\dynamic\lua_d.lib;$(SolutionDir)bin\OgreNewt_VS10\$(Configuration)\OgreNewt_d.lib;$(SolutionDir)Newton 2.24\sdk\x32\dll_vs9\newton.lib;$(SolutionDir)boost_1_42\lib\libboost_thread-vc100-mt-gd-1_42.lib;$(SolutionDir)boost_1_42\lib\libboost_date_time-vc100-mt-gd-1_42.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbb_debug.lib;$(SolutionDir)tbb3.0 update 5\lib\ia32\vc10\tbbmalloc_proxy_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)OgreSDK_vc10_v1-7-4\lib\debug\OgreMain_d.lib;$(SolutionDir)OgreSDK_vc10_v1-7-4\lib\debug\OIS_d.lib;$(SolutionDir)CEGUI-SDK-0.7.5-vc10\lib\CEGUIBase_d.lib;$(SolutionDir)CEGUI-SDK-0.7.5-vc10\lib\CEGUIOgreRenderer_d.lib;$(SolutionDir)CEGUI-SDK-0.7.5-vc10\lib\CEGUILuaScriptModule_d.lib;$(SolutionDir)CEGUI-SDK-0.7.5-vc10\lib\tolua++_d.lib;$(SolutionDir)CEGUI-SDK-0.7.5-vc10\dependencies\lib\static\lua_d.lib;$(SolutionDir)OgreNewt 2\lib\OgreNewt_d.lib;$(SolutionDir)Newton 2.32\packages\Win32\releaseDll\newton.lib;$(SolutionDir)boost_1_43\lib\libboost_thread-vc100-mt-gd-1_43.lib;$(SolutionDir)boost_1_43\lib\libboost_date_time-vc100-mt-gd-1_43.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ManifestFile>$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
       <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
       <EntryPointSymbol>

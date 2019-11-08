@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C28C7710-76B1-4FFD-A85A-9AEFDA25EE64}</ProjectGuid>
+    <RootNamespace>OgreNewt</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>lib\</OutDir>
+    <IntDir>OgreNewt.dir\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>lib\</OutDir>
+    <IntDir>OgreNewt.dir\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_OGRENEWT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 -O0 -g3 -fno-inline %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.\inc;..\NewtonSDK\sdk;..\ogrenew\OgreMain\include;..\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_OGRENEWT_EXPORTS;_OGRENEWT_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>./Debug/OgreNewt.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_OGRENEWT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\OgreNewt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /STACK:10000000 /machine:I386 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;newton.lib;OgreMain_d.lib</AdditionalDependencies>
+      <OutputFile>./lib/OgreNewt_d.dll</OutputFile>
+      <Version>2.0</Version>
+      <AdditionalLibraryDirectories>../ogrenew/lib;../boost/lib;../NewtonSDK/sdk/x32/dll_vs7;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\lib\OgreNewt_d.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\lib\OgreNewt_d.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";_OGRENEWT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\inc;..\NewtonSDK\sdk;..\ogrenew\OgreMain\include;..\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_OGRENEWT_EXPORTS;_OGRENEWT_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>./Release/OgreNewt.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";_OGRENEWT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /STACK:10000000 /machine:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;newton.lib;OgreMain.lib</AdditionalDependencies>
+      <OutputFile>./lib/OgreNewt.dll</OutputFile>
+      <Version>2.0</Version>
+      <AdditionalLibraryDirectories>../ogrenew/lib;../boost/lib;../NewtonSDK/sdk/x32/dll_vs7;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>lib\OgreNewt.pdb</ProgramDatabaseFile>
+      <ImportLibrary>lib\OgreNewt.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\OgreNewt_BasicJoints.cpp" />
+    <ClCompile Include="src\OgreNewt_Body.cpp" />
+    <ClCompile Include="src\OgreNewt_BodyInAABBIterator.cpp" />
+    <ClCompile Include="src\OgreNewt_Collision.cpp" />
+    <ClCompile Include="src\OgreNewt_CollisionPrimitives.cpp" />
+    <ClCompile Include="src\OgreNewt_CollisionSerializer.cpp" />
+    <ClCompile Include="src\OgreNewt_ContactCallback.cpp" />
+    <ClCompile Include="src\OgreNewt_ContactJoint.cpp" />
+    <ClCompile Include="src\OgreNewt_Debugger.cpp" />
+    <ClCompile Include="src\OgreNewt_Joint.cpp" />
+    <ClCompile Include="src\OgreNewt_MaterialID.cpp" />
+    <ClCompile Include="src\OgreNewt_MaterialPair.cpp" />
+    <ClCompile Include="src\OgreNewt_PlayerController.cpp" />
+    <ClCompile Include="src\OgreNewt_RayCast.cpp" />
+    <ClCompile Include="src\OgreNewt_Tools.cpp" />
+    <ClCompile Include="src\OgreNewt_Vehicle.cpp" />
+    <ClCompile Include="src\OgreNewt_World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\OgreNewt.h" />
+    <ClInclude Include="inc\OgreNewt_BasicFrameListener.h" />
+    <ClInclude Include="inc\OgreNewt_BasicJoints.h" />
+    <ClInclude Include="inc\OgreNewt_Body.h" />
+    <ClInclude Include="inc\OgreNewt_BodyInAABBIterator.h" />
+    <ClInclude Include="inc\OgreNewt_Collision.h" />
+    <ClInclude Include="inc\OgreNewt_CollisionPrimitives.h" />
+    <ClInclude Include="inc\OgreNewt_CollisionSerializer.h" />
+    <ClInclude Include="inc\OgreNewt_ContactCallback.h" />
+    <ClInclude Include="inc\OgreNewt_ContactJoint.h" />
+    <ClInclude Include="inc\OgreNewt_Debugger.h" />
+    <ClInclude Include="inc\OgreNewt_Joint.h" />
+    <ClInclude Include="inc\OgreNewt_MaterialID.h" />
+    <ClInclude Include="inc\OgreNewt_MaterialPair.h" />
+    <ClInclude Include="inc\OgreNewt_PlayerController.h" />
+    <ClInclude Include="inc\OgreNewt_Prerequisites.h" />
+    <ClInclude Include="inc\OgreNewt_RayCast.h" />
+    <ClInclude Include="inc\OgreNewt_Tools.h" />
+    <ClInclude Include="inc\OgreNewt_Vehicle.h" />
+    <ClInclude Include="inc\OgreNewt_World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

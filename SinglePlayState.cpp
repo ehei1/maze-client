@@ -47,9 +47,9 @@ namespace State
 		RandomizeDungeon(20, 20);
 		SyncPlayer();
 
-		CEGUI::System::getSingleton().executeScriptFile("singlePlay.enter.lua");
+		//CEGUI::System::getSingleton().executeScriptFile("singlePlay.enter.lua");
 
-		mApplication.GetNewtonWorld()->getDebugger().init(&mSceneManager);
+		//mApplication.GetNewtonWorld()->getDebugger().init(&mSceneManager);
 	}
 
 	void SinglePlayState::pause()
@@ -111,14 +111,14 @@ namespace State
 
 	bool SinglePlayState::frameStarted(const Ogre::FrameEvent& frameEvent)
 	{
-#ifdef _DEBUG
-		{
-			OgreNewt::Debugger& debug(Application::GetSingleton().GetNewtonWorld()->getDebugger());
-			debug.showDebugInformation();
-			debug.startRaycastRecording();
-			debug.clearRaycastsRecorded();
-		}
-#endif
+//#ifdef _DEBUG
+//		{
+//			OgreNewt::Debugger& debug(Application::GetSingleton().GetNewtonWorld()->getDebugger());
+//			debug.showDebugInformation();
+//			debug.startRaycastRecording();
+//			debug.clearRaycastsRecorded();
+//		}
+//#endif
 
 		return State::frameStarted(frameEvent);
 	}
@@ -199,7 +199,7 @@ namespace State
 			Ogre::BillboardSet* billboardSet = new Ogre::BillboardSet("A super unique name", 1);
 			assert(billboardSet);
 
-			billboardSet->setMaterialName("hoq_blank");
+			billboardSet->setMaterialName("Ogre/Skin");
 			billboardSet->setBillboardOrigin(Ogre::BBO_CENTER);
 
 			Ogre::Billboard* const billboard = billboardSet->createBillboard(Ogre::Vector3::ZERO);
@@ -372,9 +372,10 @@ namespace State
 		}
 
 		// load level collision from serialized file
-		Ogre::FileHandleDataStream streamFile (file);
+		auto dataStreamPtr = Ogre::DataStreamPtr(new Ogre::FileHandleDataStream(file));
 		OgreNewt::CollisionSerializer loadLevelCollision; 
-		OgreNewt::CollisionPtr col = loadLevelCollision.importCollision(streamFile, mApplication.GetNewtonWorld());
+		
+		OgreNewt::CollisionPtr col = loadLevelCollision.importCollision(dataStreamPtr, mApplication.GetNewtonWorld());
 		fclose (file);
 		OgreNewt::Body* bod = new OgreNewt::Body( mApplication.GetNewtonWorld(), OgreNewt::CollisionPtr(col));
 		bod->attachNode( floornode );

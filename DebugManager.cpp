@@ -41,7 +41,7 @@ void DebugManager::Initialize()
 	mDebugOverlayElement->setPosition(
 		0,
 		renderWindow->getHeight() - fontHeight);
-	mDebugOverlayElement->setFontName("FontTooltip");
+	mDebugOverlayElement->setFontName("StarWars");
 	mDebugOverlayElement->setColourBottom(Ogre::ColourValue(0.3, 0.5, 0.3));
 	mDebugOverlayElement->setColourTop(Ogre::ColourValue(0.5, 0.7, 0.5));
 	mDebugOverlayElement->setAlignment(Ogre::TextAreaOverlayElement::Left);

@@ -48,9 +48,10 @@ namespace Dungeon
 		else
 		{
 			wall = sceneManager.createEntity(
-				wallEntityName,
-				mTileProperty.mWall.mMeshFileName);
-			wall->setMaterialName(mTileProperty.mWall.mMaterialName);
+				wallEntityName, "Barrel.mesh");
+				//mTileProperty.mWall.mMeshFileName);
+			//wall->setMaterialName(mTileProperty.mWall.mMaterialName);
+			wall->setMaterialName("Ogre/Tusks");
 			wall->setQueryFlags(Common::QueryWall);
 		}
 
@@ -90,7 +91,7 @@ namespace Dungeon
 				(tileSize.x * mTileProperty.mWidth),
 				mTileProperty.mHeight,
 				(tileSize.y * mTileProperty.mWidth));
-			childSceneNode->setVisible(false);
+			childSceneNode->setVisible(true);
 
 			// LUJ, 물리 엔진으로 동작하는 충돌 블록을 만든다
 			// {
@@ -281,7 +282,7 @@ namespace Dungeon
 								childSceneNode->translate(framePosition);
 								childSceneNode->setScale(frameScale);
 								childSceneNode->setOrientation(frameOrientation);
-								childSceneNode->setVisible(false);
+								childSceneNode->setVisible(true);
 							}
 						}
 
@@ -337,7 +338,7 @@ namespace Dungeon
 				Ogre::SceneNode* const floorNode = sceneNode.createChildSceneNode("floorNode");
 				assert(floorNode);
 				floorNode->attachObject(floor);
-				floorNode->setVisible(false);
+				floorNode->setVisible(true);
 
 				//OgreNewt::World* const newtonWorld = Application::GetSingleton().GetNewtonWorld();
 				// LUJ, 이걸 안하면 물리가 전혀 작동안한다! 몰라서 한참 헤맸다. 제기랄
@@ -357,7 +358,7 @@ namespace Dungeon
 			}
 
 			dungeonStaticGeometry->setCastShadows(false);
-			dungeonStaticGeometry->build();
+			//dungeonStaticGeometry->build();
 		}
 	}
 
